@@ -1,10 +1,11 @@
 class TMeeting {
   String? userName;
-  String? trineeName;
+  String? des;
   String? trineeTitle;
   String? date;
+  String? state;
   TMeeting(
-    this.trineeName,
+    this.des,
     this.trineeTitle,
     this.date,
     this.userName,
@@ -12,8 +13,9 @@ class TMeeting {
 
   TMeeting.fromJson(Map<String, dynamic> json) {
     userName = json['userName'];
-    trineeName = json['trineeName'];
+    des = json['des'];
     trineeTitle = json['trineeTitle'];
     date = json['date'];
+    state = json['state'];
   }
 }

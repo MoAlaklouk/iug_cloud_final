@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:web_test/Model/TSubject.dart';
 import 'package:web_test/Utils/validator.dart';
 
 import '../../../Helpers/assets_color.dart';
@@ -13,6 +14,7 @@ import 'addSubject_controller.dart';
 class AddTraineeScreen extends StatelessWidget {
   AddTraineeScreen({super.key});
   final gKey = GlobalKey<FormState>();
+  TSubject tSubject = Get.arguments;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,14 +53,14 @@ class AddTraineeScreen extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        'Title ',
+                                        'Title :  ',
                                         style: getBoldStyle(fontSize: 18.sp),
                                       ),
                                     ),
                                     Expanded(
                                       flex: 3,
                                       child: Text(
-                                        'Title ',
+                                        '${tSubject.title}',
                                         style: getRegularStyle(fontSize: 16.sp),
                                       ),
                                     ),
@@ -71,14 +73,14 @@ class AddTraineeScreen extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: Text(
-                                        'Description ',
+                                        'Description : ',
                                         style: getBoldStyle(fontSize: 18.sp),
                                       ),
                                     ),
                                     Expanded(
                                       flex: 3,
                                       child: Text(
-                                        'description ',
+                                        '${tSubject.des} ',
                                         style: getRegularStyle(fontSize: 16.sp),
                                       ),
                                     ),
@@ -148,7 +150,7 @@ class AddTraineeScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               image: DecorationImage(
-                                  image: NetworkImage(
+                                  image: NetworkImage(tSubject.image ??
                                       'https://cdn.w600.comps.canstockphoto.com/todays-lesson-words-on-school-stock-photo_csp7882734.jpg'),
                                   fit: BoxFit.cover)),
                         ),
@@ -169,7 +171,11 @@ class AddTraineeScreen extends StatelessWidget {
                                     vertical: 40.w,
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  if (gKey.currentState!.validate()) {
+                                    controller.addSubject();
+                                  }
+                                },
                                 child: Text(
                                   'Add',
                                   style: getRegularStyle(fontSize: 20.sp),

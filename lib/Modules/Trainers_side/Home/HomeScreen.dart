@@ -9,6 +9,7 @@ import 'package:web_test/Model/TSubject.dart';
 import 'package:web_test/Modules/Trainers_side/Home/home_controller.dart';
 
 import '../addSubject/addSubject_screen.dart';
+import '../myTrainee/myTraineeDetails_screen.dart';
 
 class TrHomeScreen extends StatelessWidget {
   const TrHomeScreen({super.key});
@@ -27,7 +28,7 @@ class TrHomeScreen extends StatelessWidget {
               height: 50,
             ),
             SizedBox(
-              height: 330,
+              height: 400,
               child: ListView.separated(
                 shrinkWrap: true,
 
@@ -35,7 +36,7 @@ class TrHomeScreen extends StatelessWidget {
                 itemCount: controller.myTData.length,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) =>
-                    childItem(controller.myTData[index]),
+                    childItem(controller.myTData[index], isMy: true),
                 separatorBuilder: (context, index) => SizedBox(
                   width: 20,
                 ),
@@ -52,7 +53,7 @@ class TrHomeScreen extends StatelessWidget {
               height: 50,
             ),
             SizedBox(
-              height: 330,
+              height: 400,
               child: ListView.separated(
                 shrinkWrap: true,
                 // physics: NeverScrollableScrollPhysics(),
@@ -71,7 +72,7 @@ class TrHomeScreen extends StatelessWidget {
     );
   }
 
-  childItem(TSubject tSubject) {
+  childItem(TSubject tSubject, {isMy = false}) {
     return Container(
       height: 400,
       width: 500,
@@ -104,21 +105,39 @@ class TrHomeScreen extends StatelessWidget {
                     'Description : ${tSubject.des}',
                     style: getMediumStyle(fontSize: 15),
                   ),
-                  Align(
-                    alignment: AlignmentDirectional.centerEnd,
-                    child: GestureDetector(
-                      onTap: () => Get.to(() => AddTraineeScreen()),
-                      child: Container(
-                        width: 100,
-                        alignment: AlignmentDirectional.center,
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                            color: AssetsColors.primaryColor,
-                            borderRadius: BorderRadius.circular(16.r)),
-                        child: Text('Add'),
-                      ),
-                    ),
-                  )
+                  isMy
+                      ? Align(
+                          alignment: AlignmentDirectional.centerEnd,
+                          child: GestureDetector(
+                            onTap: () =>
+                                {Get.to(() => MyTraineeDetailsScreen(),arguments: tSubject)},
+                            child: Container(
+                              width: 100,
+                              alignment: AlignmentDirectional.center,
+                              padding: EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                  color: Colors.amber[900],
+                                  borderRadius: BorderRadius.circular(16.r)),
+                              child: Text('show'),
+                            ),
+                          ),
+                        )
+                      : Align(
+                          alignment: AlignmentDirectional.centerEnd,
+                          child: GestureDetector(
+                            onTap: () => Get.to(() => AddTraineeScreen(),
+                                arguments: tSubject),
+                            child: Container(
+                              width: 100,
+                              alignment: AlignmentDirectional.center,
+                              padding: EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                  color: AssetsColors.primaryColor,
+                                  borderRadius: BorderRadius.circular(16.r)),
+                              child: Text('Add'),
+                            ),
+                          ),
+                        )
                 ]),
           )),
         ],

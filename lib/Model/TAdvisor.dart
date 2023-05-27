@@ -17,6 +17,6 @@ class TAdvisor {
     phone = json['phone'];
     trainee = json['Trainee'];
     phone = json['phone'];
-    email = json['email'];
+    trinerNum = json['trinerNum'];
   }
 }

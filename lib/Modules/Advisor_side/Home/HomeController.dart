@@ -6,7 +6,7 @@ import '../../../Model/TActivity.dart';
 import '../../../Utils/firebase.dart';
 
 class AdvHomeController extends BaseGetxController {
-   List<TMeeting> newsData = [];
+  List<TMeeting> newsData = [];
   List key = [];
 
   fetchDataFromFirebase() async {
@@ -14,12 +14,11 @@ class AdvHomeController extends BaseGetxController {
     setLoading(true);
     update();
 
-    var starCountRef = FirebaseUtiles.trfireStoreActivity;
+    var starCountRef = FirebaseUtiles.advfireStoreMeeting;
     starCountRef.get().then((QuerySnapshot querySnapshot) {
       querySnapshot.docs.forEach((element) {
         key.add(element.id);
-        newsData
-            .add(TMeeting.fromJson(element.data() as Map<String, dynamic>));
+        newsData.add(TMeeting.fromJson(element.data() as Map<String, dynamic>));
       });
 
       update();
@@ -30,7 +29,7 @@ class AdvHomeController extends BaseGetxController {
 
   @override
   void onInit() {
-    // fetchDataFromFirebase();
+    fetchDataFromFirebase();
     super.onInit();
   }
 }

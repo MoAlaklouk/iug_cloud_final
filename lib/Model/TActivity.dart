@@ -2,7 +2,7 @@ class TActivity {
   String? title;
   String? user;
   String? state;
-  DateTime? time;
+  String? time;
   String? description;
 
   TActivity({

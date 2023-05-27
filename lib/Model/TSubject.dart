@@ -2,11 +2,12 @@ class TSubject {
   String? title;
   String? image;
   String? des;
- TSubject(this.des, this.image, this.title);
-   TSubject.fromJson(Map<String, dynamic> json) {
+  String? advisor;
+  TSubject(this.des, this.image, this.title, this.advisor);
+  TSubject.fromJson(Map<String, dynamic> json) {
     title = json['title'];
     image = json['image'];
     des = json['des'];
-
-   }
+    advisor = json['advisor'];
+  }
 }

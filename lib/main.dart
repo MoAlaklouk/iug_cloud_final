@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeManager.appTheme,
 
-        home: TrMainScreen(),
+        home: LoginSceen(),
       ),
     );
   }

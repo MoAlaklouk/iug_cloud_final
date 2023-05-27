@@ -8,7 +8,7 @@ import '../../base/baseGetxController.dart';
 class HomeController extends BaseGetxController {
   @override
   void onInit() async {
-    // fetchDataFromFirebase();
+    fetchDataFromFirebase();
     super.onInit();
   }
 

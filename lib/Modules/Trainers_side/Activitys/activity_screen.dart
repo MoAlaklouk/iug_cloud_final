@@ -16,80 +16,72 @@ class ActivityScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GetBuilder<ActivityController>(
-        builder: (controller) => controller.isLoading
-            ? Center(
-                child: CircularProgressIndicator(),
-              )
-            : Padding(
-                padding: EdgeInsets.all(30.0.w),
-                child: Container(
-                  color: AssetsColors.secondaryColor,
-                  child: Padding(
-                    padding: EdgeInsets.all(16.0.w),
-                    child: DataTable2(
-                      minWidth: 600,
-                      columns: [
-                        DataColumn(
-                          label: Text(
-                            " title",
-                            style: getRegularStyle(fontSize: 20.sp),
-                          ),
-                        ),
-                        DataColumn(
-                          label: Text(
-                            " description",
-                            style: getRegularStyle(fontSize: 20.sp),
-                          ),
-                        ),
-                        DataColumn(
-                          label: Text(
-                            " user",
-                            style: getRegularStyle(fontSize: 20.sp),
-                          ),
-                        ),
-                        DataColumn(
-                          label: Text(
-                            "time",
-                            style: getRegularStyle(fontSize: 20.sp),
-                          ),
-                        ),
-                        DataColumn(
-                          label: Text(
-                            "state",
-                            style: getRegularStyle(fontSize: 20.sp),
-                          ),
-                        ),
-                      ],
-                      rows: List.generate(
-                        controller.newsData.length,
-                        (index) => DataRow(
-                          cells: [
-                            DataCell(Text(
-                              controller.newsData[index].title ?? '',
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            )),
-                            DataCell(Text(
-                                controller.newsData[index].description ?? '',
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis)),
-                            DataCell(Text(controller.newsData[index].user ?? '',
-                                maxLines: 1, overflow: TextOverflow.ellipsis)),
-                            DataCell(Text(
-                                controller.newsData[index].time.toString(),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis)),
-                            DataCell(Text(
-                                controller.newsData[index].state.toString(),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis)),
-                          ],
-                        ),
-                      ),
+        builder: (controller) => Padding(
+          padding: EdgeInsets.all(30.0.w),
+          child: Container(
+            color: AssetsColors.secondaryColor,
+            child: Padding(
+              padding: EdgeInsets.all(16.0.w),
+              child: DataTable2(
+                minWidth: 600,
+                columns: [
+                  DataColumn(
+                    label: Text(
+                      " title",
+                      style: getRegularStyle(fontSize: 20.sp),
                     ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      " description",
+                      style: getRegularStyle(fontSize: 20.sp),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      " user",
+                      style: getRegularStyle(fontSize: 20.sp),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      "time",
+                      style: getRegularStyle(fontSize: 20.sp),
+                    ),
+                  ),
+                  DataColumn(
+                    label: Text(
+                      "state",
+                      style: getRegularStyle(fontSize: 20.sp),
+                    ),
+                  ),
+                ],
+                rows: List.generate(
+                  controller.newsData.length,
+                  (index) => DataRow(
+                    cells: [
+                      DataCell(Text(
+                        controller.newsData[index].title ?? '',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      )),
+                      DataCell(Text(
+                          controller.newsData[index].description ?? '',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis)),
+                      DataCell(Text(controller.newsData[index].user ?? '',
+                          maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DataCell(Text(controller.newsData[index].time.toString(),
+                          maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      DataCell(Text(controller.newsData[index].state.toString(),
+                          maxLines: 1, overflow: TextOverflow.ellipsis)),
+                    ],
                   ),
                 ),
               ),
+            ),
+          ),
+        ),
       ),
     );
   }

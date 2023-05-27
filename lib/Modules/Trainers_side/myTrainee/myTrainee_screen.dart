@@ -3,10 +3,13 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:web_test/Modules/Trainers_side/Home/home_controller.dart';
 import 'package:web_test/Modules/Trainers_side/myTrainee/myTraineeDetails_screen.dart';
+import 'package:web_test/Modules/manager_side/Home/home_controller.dart';
 
 import '../../../Helpers/assets_color.dart';
 import '../../../Helpers/style_manager.dart';
+import '../../../Model/TSubject.dart';
 
 class MyTraineeScreen extends StatelessWidget {
   const MyTraineeScreen({super.key});
@@ -14,32 +17,38 @@ class MyTraineeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text(
-            'My Trainee',
-            style: getBoldStyle(fontSize: 40),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          Expanded(
-            child: GridView.count(
-                padding: EdgeInsets.all(20),
-                mainAxisSpacing: 20,
-                crossAxisSpacing: 20,
-                crossAxisCount: 3,
-                children: List.generate(6, (index) => childItem())),
-          ),
-        ],
+      body: GetBuilder<TrHomeController>(
+        builder: (controller) => Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'My Trainee',
+              style: getBoldStyle(fontSize: 40),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Expanded(
+              child: GridView.count(
+                  padding: EdgeInsets.all(20),
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                  crossAxisCount: 3,
+                  children: List.generate(controller.myTData.length,
+                      (index) => childItem(controller.myTData[index]))),
+            ),
+          ],
+        ),
       ),
     );
   }
 }
 
-childItem() {
+childItem(
+  TSubject tSubject,
+) {
   return Container(
-    height: 300,
+    height: 400,
     width: 500,
     decoration: BoxDecoration(
         color: AssetsColors.secondaryColor,
@@ -50,9 +59,7 @@ childItem() {
             child: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: NetworkImage(
-                      'https://cdn.w600.comps.canstockphoto.com/todays-lesson-words-on-school-stock-photo_csp7882734.jpg'),
-                  fit: BoxFit.cover)),
+                  image: NetworkImage('${tSubject.image}'), fit: BoxFit.cover)),
           padding: EdgeInsets.all(16.w),
         )),
         Expanded(
@@ -64,17 +71,20 @@ childItem() {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  'title',
-                  style: getBoldStyle(fontSize: 40),
+                  'title : ${tSubject.title}',
+                  style: getBoldStyle(fontSize: 20),
                 ),
                 Text(
-                  'Des',
-                  style: getMediumStyle(fontSize: 30),
+                  'Description : ${tSubject.des}',
+                  style: getMediumStyle(fontSize: 15),
                 ),
                 Align(
                   alignment: AlignmentDirectional.centerEnd,
                   child: GestureDetector(
-                    onTap: () => {Get.to(() => MyTraineeDetailsScreen())},
+                    onTap: () => {
+                      Get.to(() => MyTraineeDetailsScreen(),
+                          arguments: tSubject)
+                    },
                     child: Container(
                       width: 100,
                       alignment: AlignmentDirectional.center,

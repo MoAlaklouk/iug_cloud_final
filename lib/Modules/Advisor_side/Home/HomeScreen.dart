@@ -42,15 +42,16 @@ class AdvHomeScreen extends StatelessWidget {
                             style: getRegularStyle(fontSize: 20.sp),
                           ),
                         ),
+                     
                         DataColumn(
                           label: Text(
-                            " trineeName",
+                            " trinee Title",
                             style: getRegularStyle(fontSize: 20.sp),
                           ),
                         ),
-                        DataColumn(
+                           DataColumn(
                           label: Text(
-                            " trineeTitle",
+                            " Description",
                             style: getRegularStyle(fontSize: 20.sp),
                           ),
                         ),
@@ -83,11 +84,11 @@ class AdvHomeScreen extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                             )),
                             DataCell(Text(
-                                controller.newsData[index].trineeName ?? '',
+                                controller.newsData[index].trineeTitle ?? '',
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis)),
                             DataCell(Text(
-                                controller.newsData[index].trineeTitle ?? '',
+                                controller.newsData[index].date ?? '',
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis)),
                             DataCell(Text(

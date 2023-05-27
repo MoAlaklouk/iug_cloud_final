@@ -36,6 +36,12 @@ class TrainingRequestsScreen extends StatelessWidget {
                             columns: [
                               DataColumn(
                                 label: Text(
+                                  "title",
+                                  style: getRegularStyle(fontSize: 20.sp),
+                                ),
+                              ),
+                              DataColumn(
+                                label: Text(
                                   "Trainers name",
                                   style: getRegularStyle(fontSize: 20.sp),
                                 ),
@@ -69,7 +75,12 @@ class TrainingRequestsScreen extends StatelessWidget {
                                     overflow: TextOverflow.ellipsis,
                                   )),
                                   DataCell(Text(
-                                      controller.newsData[index].date ?? '',
+                                    controller.newsData[index].user ?? '',
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  )),
+                                  DataCell(Text(
+                                      controller.newsData[index].time ?? '',
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis)),
                                   DataCell(Text(
@@ -78,10 +89,7 @@ class TrainingRequestsScreen extends StatelessWidget {
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis)),
                                   DataCell(TextButton(
-                                    onPressed: () {
-                                      Get.to(() => EditNewsScreen(),
-                                          arguments: index);
-                                    },
+                                    onPressed: () {},
                                     child: Text(
                                       'accept',
                                       style: getRegularStyle(
@@ -90,10 +98,7 @@ class TrainingRequestsScreen extends StatelessWidget {
                                   )),
                                   DataCell(
                                     TextButton(
-                                      onPressed: () {
-                                        // controller.deleteFormFirebase(
-                                        //     controller.key[index], index);
-                                      },
+                                      onPressed: () {},
                                       child: Text(
                                         'remove',
                                         style: getRegularStyle(

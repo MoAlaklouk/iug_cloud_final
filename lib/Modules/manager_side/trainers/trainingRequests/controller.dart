@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:web_test/Model/TActivity.dart';
 import 'package:web_test/Model/TTrainers.dart';
 
 import '../../../../Utils/firebase.dart';
 import '../../../base/baseGetxController.dart';
 
 class TrainingRequestsController extends BaseGetxController {
-  List<TTrainersRequest> newsData = [];
+  List<TActivity> newsData = [];
   List key = [];
 
   fetchDataFromFirebase() async {
@@ -13,12 +14,12 @@ class TrainingRequestsController extends BaseGetxController {
     setLoading(true);
     update();
 
-    var starCountRef = FirebaseUtiles.fireStoreTrainR;
+    var starCountRef = FirebaseUtiles.trfireStoreActivity;
     starCountRef.get().then((QuerySnapshot querySnapshot) {
       querySnapshot.docs.forEach((element) {
         key.add(element.id);
         newsData.add(
-            TTrainersRequest.fromJson(element.data() as Map<String, dynamic>));
+            TActivity.fromJson(element.data() as Map<String, dynamic>));
       });
 
       update();

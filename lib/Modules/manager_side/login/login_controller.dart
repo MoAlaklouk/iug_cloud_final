@@ -127,11 +127,11 @@ class LoginController extends GetxController {
       required String imageUrl}) async {
     newsData = [];
 
-    Map<String, String> data = {
-      'title': title,
-      'description': description,
+    Map<String, dynamic> data = {
+      'name': title,
+      'trainee': description,
       'date': DateFormat('yyyy-MM-dd kk:mm:ss').format(DateTime.now()),
-      'imageUrl': imageUrl,
+      'trinerNum': '0',
       'email': email,
       'phone': phone
     };

@@ -22,8 +22,8 @@ class FirebaseUtiles {
     fireStoreTrainR = FirebaseFirestore.instance.collection('TrainersReqeust');
     fireStoreAdvisor = FirebaseFirestore.instance.collection('Advisor');
     fireStoreActivity = FirebaseFirestore.instance.collection('Activity');
-    fireStoreActivity = FirebaseFirestore.instance.collection('trActivity');
-    fireStoreActivity = FirebaseFirestore.instance.collection('advMeeting');
+    trfireStoreActivity = FirebaseFirestore.instance.collection('trActivity');
+    advfireStoreMeeting = FirebaseFirestore.instance.collection('advMeeting');
     trfireStoreForYou = FirebaseFirestore.instance.collection('foryou');
     trfireStoremyTrainee = FirebaseFirestore.instance.collection('myTrainee');
 
