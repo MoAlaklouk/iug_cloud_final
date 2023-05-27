@@ -1,0 +1,215 @@
+{
+  "login": "تسجيل الدخول",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "welcome": "مرحبا بك...",
+  "main": "الرئيسية",
+  "name": "الإسم",
+  "phone": "الرقم",
+  "save": "حفظ",
+  "update": "تعديل",
+  "cancel": "الغاء",
+  "done": "انتهاء",
+  "send": "ارسال",
+  "message": "الرسالة",
+  "ok": "موافق",
+  "enter_message": "...أدخل نص رسالتك هنا",
+  "no_data": "لا يوجد بيانات",
+  "sure": "تأكيد",
+  "exit": "رجوع",
+  "select_file": "ارفاق ملف",
+
+
+
+  
+  "update_success": "تم التعديل بنجاح",
+
+
+  "login_welcome": "أهلا وسهلا بك",
+  "login_sign_in": "تسجيل الدخول إلى حسابك.",
+  "login_enter_email": "أدخل البريد الإلكتروني",
+  "login_enter_password": "أدخل كلمة المرور",
+  "login_forget_pass": "هل نسيت كلمة المرور ؟",
+  "login_as_guest": "الدخول كزائر",
+  "login_dont_have_account": "ليس لديك حساب ؟",
+  "login_new_account": "حساب جديد",
+
+  "register_title": "انشاء حساب جديد",
+  "register_private_info": "الرجاء إدخال المعلومات الخاصة بك أدناه .",
+  "register_full_name": "الاسم كاملا",
+  "register_enter_full_name": "أدخل الاسم كاملا",
+  "register_phone": "رقم الجوال",
+  "register_enter_phone": "أدخل رقم الجوال",
+  "register_number_of_sub": "رقم اشتراك المياه",
+  "register_enter_number_of_sub": "أدخل رقم اشتراك المياه",
+  "select_enter_number_of_sub": "أختر رقم اشتراك المياه",
+
+  "register_create_account": "إنشاء حساب",
+  "register_as_guest": "الدخول كزائر",
+  "register_already_have_account": "لديك حساب بالفعل ؟",
+  "register_login": "تسجيل الدخول",
+
+
+  "forget_title": "نسيت كلمة المرور",
+  "forget_content": " الرجاء إدخال بريدك الإلكتروني أدناه, نحن سوف نرسل\n.لك رابط لإعادة تعيين كلمة المرور الخاصة بك",
+
+
+  "forget_dialog_title": "تحقق من بريدك الالكتروني",
+  "forget_dialog_content": "لقد أرسلنا لك رابط لإعادة تعيين كلمة المرور الخاصة بك.الرجاء استخدام كلمة مرورك الجديدة عند تسجيل الدخول",
+
+
+  "home": "الرئيسية",
+  "tab_services": "الخدمات",
+  "tab_map": "الخريطة",
+  "tab_complaint": "الشكاوي",
+  "tab_more": "المزيد",
+
+
+
+  "menu": "الرئيسية",
+  "menu_welcome_guest": "أهلا بك عزيزي الزائر",
+  "menu_last_news": "أخر الأخبار",
+  "menu_services": "الخدمات",
+  "menu_about": "عن البلدية",
+  "menu_search_building": "بحث عن مبنى",
+  "menu_questions": "الأسئلة الشائعة",
+  "menu_contact_us": "اتصل بنا",
+  "menu_settings": "الإعدادات",
+  "menu_privacy_policy": "الشروط والأحكام",
+  "menu_login": "تسجيل الدخول",
+
+  "menu_logout": "تسجيل الخروج",
+
+
+  "home_quick_access": "الوصول السريع",
+
+  "home_quick_schedule": "جدول\nتوزيع المياه",
+  "home_quick_services": "الخدمات\n الإلكترونية",
+  "home_quick_guide": "دليل\n المعاملات",
+  "home_quick_numbers": "أرقام \nالطواريء",
+
+  "home_last_news": "أخر الأخبار",
+  "view_all": "عرض الكل",
+  "home_ads": "الإعلانات",
+
+
+  "services_my": "خدماتي",
+  "services_guide": "دليلي",
+
+  "services_menu": "قائمة خدماتي",
+  "services_guide_menu": "قائمة دليلي",
+
+  "services_guide_systems": "أنظمة وأدلة",
+  "services_guide_craft": "دليل الحرف",
+  "services_guide_water": "جدول توزيع المياه",
+  "services_guide_numbers": "أرقام الطواريء",
+
+
+  "services_guide_followup": "متابعة معاملة",
+  "services_guide_enter": "ادخال قراءة العداد",
+  "services_guide_my_bill": "فاتورتي",
+  "services_guide_care": "إحتضان ورعاية",
+
+
+
+  "complaint": "تقديم شكوى",
+  "complaint_replay": "الشكاوي والردود",
+
+  "complaint_title": "عنوان الشكوي",
+  "complaint_enter_title": "أدخل عنوان الشكوي",
+  "complaint_desc": "تفاصيل الشكوى",
+  "complaint_enter_desc": "أدخل نص الشكوى هنا.. ",
+
+  "complaint_type": "نوع الشكوي",
+  "complaint_select_type": "اختر نوع الشكوي",
+  "complaint_service": "تحديد الخدمة",
+  "complaint_select_service": "اختر الخدمة",
+  "complaint_id": "رقم الهوية",
+  "complaint_enter_id": "أدخل رقم الهوية",
+  "complaint_region": "المنطقة",
+  "complaint_select_region": "اختر المنطقة",
+  "complaint_upload": "رفع صور",
+  "complaint_upload_photo": " JPG , JPEG",
+  "complaint_upload_file": "DOCX , PDF",
+
+
+
+  "other_news": "أخبار أخرى",
+  "notifications": "الاشعارات",
+
+  "complaint_send": "ارسال الشكوى",
+  "details": "تفاصيل",
+  "thank_you": "شكرا لك",
+  "complaint_sent_successful": " تم ارسال شكوتك بنجاح, سيتم التواصل معك في أقرب\n.وقت لحل المشكلة",
+
+  "more" : "المزيد",
+  "personal_info" : "بياناتي الشخصية",
+  "about_municipality" : "عن البلدية",
+  "settings" : "الإعدادات",
+  "important_phones" : "أرقام تهمك",
+  "photos_albums" : "ألبومات الصور",
+  "contact_us" : "اتصل بنا",
+  "faq" : "الأسئلة الشائعة",
+  "log_out" : "تسجيل الخروج",
+  "cancle" : "إلغاء",
+  "change_password" : "تغيير كلمة المرور",
+  "password" : "كلمة المرور",
+  "new_password" : "كلمة المرور الجديدة",
+  "confirm_new_password" : "تأكيد كلمة المرور الجديدة",
+  "r_u_sure_logout" : "هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟",
+  "r_u_sure_change_password" : "هل أنت متأكد أنك تريد تغير كلمة السر الخاصة بك؟",
+
+  "save_changes" : "حفظ التغييرات",
+  "please_enter_password" : "الرجاء إدخال كلمة المرور",
+  "please_enter_new_password" : "الرجاء إدخال كلمة المرور الجديدة",
+  "please_confirm_new_password" : "الرجاء تأكيد كلمة المرور الجديدة",
+  "un_matched" : "غير متطابقتين",
+
+  "txt_about" : "عن البلدية",
+  "txt_documentation_about" : "ملخص عن نشــأة بلدية غزة",
+  "txt_persons_member" : "الأعضاء الحاضرين لهذه الجلسة:",
+  "txt_municipality_in_brief" : "البلدية في سطور",
+  "txt_town_council" : "المجلس البلدي",
+  "txt_municipal_administration" : "إدارة البلدية",
+  "txt_municipal_facilities" : "مرافق ومباني البلدية",
+  "txt_staff_phones" : "هواتف الموظفين",
+  "txt_character_guide" : "دليل الحرف",
+  "txt_you_can_search" : "يمكنك البحث من خلال اسم الحرفة أو الشارع أو المبنى",
+
+  "txt_my_bill" : "فاتورتي",
+
+  "service_read_counter" : "قراءة العداد",
+  "service_enter_read_counter" : "الرجاء إدخال أول خمس خانات من اليسار ",
+  "service_reenter_read_counter" : "تأكيد الرقم",
+  "service_enter_reenter_read_counter" : "الرجاء تأكيد الرقم",
+  "service_image_for_read" : "صورة القراءة",
+
+  "service_care_content" : " لديك موهبة, فكرة, مبادرة, تحتاج إلى رعاية أو احتضان. أرسلها لنا وسيتم التواصل معكم",
+  "address" : "العنوان",
+  "enter_address" : "أدخل العنوان",
+  "service_care_idea_title" : "عنوان الفكرة",
+  "service_care_enter_idea_title" : "ادخل عنوان الفكرة",
+  "enter_details" : "أدخل نص التفاصيل هنا... ",
+  "service_care_choose_image" : "يجب اضافة صورة",
+
+
+
+  "system_building_1" :"خدمات\n البناء",
+  "system_water_2" : "خدمات\nالمياه",
+  "system_electrecity_3" : "خدمات\nالكهرباء",
+  "system_sanitation__4" : "خدمات\n الصرف الصحي",
+  "system_plan_5" : "خدمات\nالتخطيط الحضري",
+  "system_crafrt_6" : "خدمات\nالحرف",
+  "system_other_issues_7" : "معاملات\nأخرى",
+  "system_rint_8" : "استجئار بسطات\nأو عقارات للبلدية",
+  "system_health_9" : "خدمات\nالصحة والبيئة",
+  "system_lighting_10" : "خدمات \nالإنارة",
+  "system_enginering_11" : "خدمات \nالهندسة",
+  "system_other_12": "خدمات\nأخرى",
+
+  "guide_operations": "دليل الإجراءات",
+  "guide_infraction": "دليل المخالفات",
+  "centers": "المراكز"
+
+
+}
